@@ -1,0 +1,654 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Estilo da navbar */
+.navbar {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.company-name h1 {
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 28px;
+    margin: 0;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-right: 20px;
+}
+
+
+.nav-items a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.nav-items a:hover {
+    text-decoration: none;
+}
+
+.content {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.description {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.description p {
+    font-size: 32px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image-container img {
+    max-width: 80%;
+    height: auto;
+}
+
+.produtos {
+    position: relative;
+    background-image: url(imagens/parte%202%20fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 800px;
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.image-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: transparent;
+    padding: 10px;
+    width: 80%;
+    font-size: 35px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-title h3 {
+    color: white;
+    font-size: 45px;
+    margin: 0;
+    background-color: transparent;
+    font-family: 'Anton', sans-serif;
+}
+
+.rectangle {
+    background-color: rgb(245, 52, 52);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.rectangle h2 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.rectangle p {
+    font-size: 18px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.1);
+}
+
+.product-card img {
+    width: 200px;
+    /* Ajuste o tamanho da imagem conforme necessário */
+}
+
+.product-card p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+    color: white;
+}
+
+.center-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s;
+    /* Adicione a propriedade transition apenas para a propriedade transform */
+}
+
+.center-card:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+    /* Ao passar o cursor do mouse, aplicamos um leve aumento de escala */
+}
+
+.center-card img {
+    width: 230px;
+}
+
+.left-card {
+    margin-right: auto;
+    margin-top: 20px;
+    flex-basis: auto;
+}
+
+.left-card img {
+    width: 60%;
+    height: auto;
+}
+
+.right-card {
+    margin-left: 20px;
+}
+
+.right-card img {
+    max-width: 125px;
+    /* Ajuste o valor conforme necessário */
+}
+
+.bottom-left-card {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    text-align: left;
+    z-index: 1;
+}
+
+.bottom-right-card {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    text-align: right;
+    z-index: 1;
+}
+
+.bottom-right-card img {
+    width: 135px;
+}
+
+.red-band {
+    position: relative;
+    background-color: rgb(253, 55, 55);
+    width: 100%;
+    /* Defina a largura como 50% da largura da página */
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.red-box {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 20px;
+    align-items: center;
+}
+
+.red-box h4 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.red-box p {
+    margin-top: 0;
+}
+
+.red-box .top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.button {
+    margin-top: 1rem;
+    font-size: 1rem;
+    background-color: black;
+    border-radius: 25px;
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.testimonial-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.testimonial {
+    flex-basis: 30%;
+    background-color: transparent padding 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.testimonial-quote {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.quote {
+    font-size: 30px;
+    color: #888888;
+}
+
+.testimonial-text {
+    color: white;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.testimonial-name {
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    color: red;
+    font-weight: bold;
+}
+
+.xandao-texto {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.xandao-texto img {
+    max-width: 100%;
+}
+
+.xandao-texto p {
+    text-align: center;
+    margin-right: 10px;
+}
+
+.subscribe-button {
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.subscribe-button:hover {
+    background-color: black;
+    font-weight: bolder;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.text-content {
+    flex: 1;
+    margin-left: 25px;
+    font-family: 'Anton', sans-serif;
+    font-size: 25px;
+}
+
+.red-band .row {
+    height: 100%;
+}
+
+.red-band .row .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-content { 
+    text-align: right;
+    display: flex;
+    align-items: center;
+}
+
+.footer {
+    position: relative;
+    background-color: black;
+    color: white;
+    padding-bottom: 15px;
+}
+
+.footer-image {
+    position: relative;
+}
+
+.image-text {
+    position: absolute;
+    bottom: 110px;
+    left: 120px;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    padding: 10px;
+    padding-bottom: 78px;
+}
+
+.second-text {
+    position: absolute;
+    bottom: 85px;
+    left: 110px;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    padding: 10px;
+    padding-bottom: 77px;
+}
+
+.second-text p {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.additional-text {
+    position: absolute;
+    bottom: 150px;
+    left: 120px;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    padding: 3px;
+    padding-bottom: 75px;
+}
+
+.additional-text p {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+.extra-text {
+    position: absolute;
+    bottom: 45px;
+    left: 120px;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 85px;
+}
+
+.new-text {
+    position: absolute;
+    bottom: 15px;
+    left: 187px;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 86px;
+}
+
+.additional-text-2 {
+    position: absolute;
+    bottom: 25px;
+    left: 33px;
+    background-color: transparent;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding-bottom: 125px;
+}
+
+.image-text {
+    font-family: 'Ubuntu', sans-serif;
+    left: 100px;
+}
+
+.image-text p {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.footer-image img {
+    width: 100%;
+    height: auto;
+}
+
+.footer-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.footer-content .logo {
+    margin-right: 10px;
+}
+
+.footer-content .logo img {
+    width: 85px;
+    height: auto;
+}
+
+.footer-content h4 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    text-align: center;
+}
+
+.footer-text p {
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 1286px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .image-text,
+    .second-text,
+    .additional-text,
+    .extra-text,
+    .new-text,
+    .additional-text-2 {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        text-align: center;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    .product-cards img {
+        max-width: 100px;
+    }
+
+    .red-band .row {
+        flex-direction: column;
+    }
+
+    .image-content .img-fluid {
+        margin-top: 20px;
+    }
+
+    .footer-content {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-content .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+    .logo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .company-name {
+        margin-top: 10px;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    .nav-items li {
+        margin: 10px 0;
+    }
+
+    .description,
+    .image-container {
+        text-align: center;
+    }
+
+    .red-box {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+    }
+
+    .text-content h4 {
+        font-size: 24px;
+    }
+
+    .text-content p {
+        font-size: 16px;
+    }
+
+    .subscribe-button {
+        margin-top: 20px;
+    }
+
+    .subscribe-button a {
+        display: block;
+        width: 100%;
+    }
+
+    .testimonial-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 462px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-items {
+        margin-left: 0;
+    }
+}
